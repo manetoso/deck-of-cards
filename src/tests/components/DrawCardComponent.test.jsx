@@ -7,7 +7,7 @@ import {
 } from '@testing-library/react'
 
 import { useDeck } from '../../hooks/useDeck'
-import { DrawCardComponent } from '../../components/DrawCardComponent'
+import { DrawCardComponent } from '../../components/gameControls/components/DrawCardComponent'
 
 describe('DrawCardComponent tests', () => {
   test('DrawCardComponent renders correctly', () => {

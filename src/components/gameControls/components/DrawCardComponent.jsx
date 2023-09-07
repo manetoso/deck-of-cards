@@ -6,7 +6,7 @@ export function DrawCardComponent({ drawCard, gameFinished }) {
   const handleButtonClick = async () => {
     if (buttonDisable) return
 
-    setButtonDisable(true)
+    // setButtonDisable(true)
     await drawCard()
   }
 
@@ -21,7 +21,7 @@ export function DrawCardComponent({ drawCard, gameFinished }) {
     }
   }, [buttonDisable])
   return (
-    <button disabled={gameFinished | buttonDisable} onClick={handleButtonClick}>
+    <button className='btn' disabled={gameFinished | buttonDisable} onClick={handleButtonClick}>
       Draw a Card
     </button>
   )

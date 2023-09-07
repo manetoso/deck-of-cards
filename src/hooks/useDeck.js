@@ -43,12 +43,8 @@ export const useDeck = () => {
         `/${currentDeck.deck_id}/draw/?count=1`
       )
       const { cards, remaining } = data
-      const {
-        code,
-        value,
-        images: { svg }
-      } = cards[0]
-      setPlayerPile([...playerPile, { code, value, img: svg }])
+      const { code, value, image } = cards[0]
+      setPlayerPile([...playerPile, { code, value, img: image }])
       setCurrentDeck({ ...currentDeck, remaining })
       if (code.includes('Q')) setQueenCounter(queenCounter + 1)
     } catch (error) {
@@ -81,7 +77,6 @@ export const useDeck = () => {
 
   const finishGame = () => {
     setGameFinished(true)
-    alert('Game Finished!')
     const clubsPile = searchQuenInPile(playerPile, 'C')
     const diamondsPile = searchQuenInPile(playerPile, 'D')
     const heartsPile = searchQuenInPile(playerPile, 'H')
@@ -96,6 +91,11 @@ export const useDeck = () => {
       hearts,
       spades
     })
+    alert(`Game Finished!
+    Clubs: ${clubs.join(', ')}
+    Diamonds: ${diamonds.join(', ')}
+    Hearts: ${hearts.join(', ')}
+    Spades: ${spades.join(', ')}`)
   }
 
   useEffect(() => {

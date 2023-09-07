@@ -1,0 +1,27 @@
+.btn {
+  background-color: #7c3aed;
+  color: #f7fafc;
+  border-color: transparent;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(110%);
+}
+
+.btn:active {
+  filter: brightness(90%);
+}
+
+.btn:disabled {
+  filter: brightness(50%);
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  background-color: #be123c;
+}

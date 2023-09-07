@@ -116,6 +116,7 @@ export const useDeck = () => {
     playerPile,
     queenCounter,
     resetGame,
+    finishGame,
     results
   }
 }

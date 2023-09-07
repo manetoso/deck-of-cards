@@ -1,5 +1,5 @@
 {
-  "env": { "browser": true, "es2020": true },
+  "env": { "browser": true, "es2020": true, "jest": true },
   "extends": [
     "./node_modules/standard/eslintrc.json",
     "plugin:react/recommended",

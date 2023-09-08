@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast'
 import { DeckComponent } from './components/deckComponent'
 import { GameControls } from './components/gameControls'
 import { GameInfo } from './components/gameInfo'
@@ -35,6 +36,7 @@ function App() {
           backOfCardImage={backOfCardImage}
         />
       </main>
+      <Toaster position='top-right' />
     </>
   )
 }

@@ -1,4 +1,6 @@
 import { useState, useCallback, useEffect } from 'react'
+import { toast } from 'react-hot-toast'
+import JSConfetti from 'js-confetti'
 import { deckApi, backOfCardImage } from '../api/deckApi'
 
 /**
@@ -16,6 +18,7 @@ const resultsInitialState = {
 }
 
 export const useDeck = () => {
+  const jsConfetti = new JSConfetti()
   const [currentDeck, setCurrentDeck] = useState({
     deck_id: '',
     remaining: 0,
@@ -53,6 +56,19 @@ export const useDeck = () => {
   }
 
   const resetGame = async () => {
+    toast.success('Game Restart', {
+      style: {
+        border: '2px solid #8b5cf6',
+        padding: '16px',
+        color: '#F7FAFC',
+        backgroundColor: '#031741'
+      },
+      iconTheme: {
+        primary: '#8b5cf6',
+        secondary: '#F7FAFC'
+      },
+      icon: '🎲'
+    })
     await createDeck()
     setGameFinished(false)
     setResults(resultsInitialState)
@@ -91,11 +107,19 @@ export const useDeck = () => {
       hearts,
       spades
     })
-    alert(`Game Finished!
-    Clubs: ${clubs.join(', ')}
-    Diamonds: ${diamonds.join(', ')}
-    Hearts: ${hearts.join(', ')}
-    Spades: ${spades.join(', ')}`)
+    toast.success('Game Finished!', {
+      style: {
+        border: '2px solid #8b5cf6',
+        padding: '16px',
+        color: '#F7FAFC',
+        backgroundColor: '#031741'
+      },
+      iconTheme: {
+        primary: '#8b5cf6',
+        secondary: '#F7FAFC'
+      }
+    })
+    jsConfetti.addConfetti()
   }
 
   useEffect(() => {

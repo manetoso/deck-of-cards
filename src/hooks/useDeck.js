@@ -56,7 +56,7 @@ export const useDeck = () => {
   }
 
   const resetGame = async () => {
-    toast.success('Game Restart', {
+    toast.success('Game Restarted', {
       style: {
         border: '2px solid #8b5cf6',
         padding: '16px',

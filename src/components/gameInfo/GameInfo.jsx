@@ -5,12 +5,14 @@ export const GameInfo = ({ queenCounter, currentDeck, results }) => {
   return (
     <>
       <section className='game-info'>
-        <span>Queen Counter: {queenCounter}</span>
-        <span>Remaining cards: {currentDeck.remaining}</span>
+        <span className='label'>
+          Queen Counter: <b>{queenCounter}</b>
+        </span>
+        <span className='label'>
+          Remaining cards: <b>{currentDeck.remaining}</b>
+        </span>
       </section>
-      <>
-        {results.clubs.length !== 0 && <GameResults results={results} />}
-      </>
+      <>{results.clubs.length !== 0 && <GameResults results={results} />}</>
     </>
   )
 }

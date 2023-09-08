@@ -6,12 +6,13 @@ import {
   waitFor
 } from '@testing-library/react'
 
-import { useDeck } from '../../hooks/useDeck'
-import { DrawCardComponent } from '../../components/gameControls/components/DrawCardComponent'
+import { useDeck } from '../../../../hooks/useDeck'
+import { DrawCardComponent } from '../../../../components/gameControls/components/DrawCardComponent'
 
 describe('DrawCardComponent tests', () => {
   test('DrawCardComponent renders correctly', () => {
     const { container } = render(<DrawCardComponent />)
+    // create a new snapshot file
     expect(container).toMatchSnapshot()
   })
 

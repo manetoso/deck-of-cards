@@ -5,7 +5,7 @@ import { useDeck } from './hooks/useDeck'
 
 function App() {
   const {
-    // backOfCardImage,
+    backOfCardImage,
     currentDeck,
     drawCard,
     gameFinished,
@@ -30,7 +30,10 @@ function App() {
           currentDeck={currentDeck}
           results={results}
         />
-        <DeckComponent playerPile={playerPile} />
+        <DeckComponent
+          playerPile={playerPile}
+          backOfCardImage={backOfCardImage}
+        />
       </main>
     </>
   )

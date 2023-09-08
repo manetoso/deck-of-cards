@@ -1,0 +1,31 @@
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.game-results {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.game-results p strong {
+  color: #f2f2f2;
+  text-shadow: 0 0 5px rgb(139, 92, 246);
+}
+
+h3 {
+  margin: 0;
+  color: #f2f2f2;
+  text-shadow: 0 0 5px rgb(139, 92, 246);
+}
+
+.label {
+  font-weight: bolder;
+}
+.label b {
+  color: #f2f2f2;
+  text-shadow: 0 0 5px rgb(139, 92, 246);
+}
